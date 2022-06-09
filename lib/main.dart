@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: NavBar(),
     );
   }
@@ -45,7 +46,7 @@ class _NavBarState extends State<NavBar> {
     return Scaffold(
       appBar: AppBar(
           title: const Text('Exercise Guide App'),
-          backgroundColor: Colors.amber),
+          backgroundColor: Colors.blueGrey),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -54,26 +55,30 @@ class _NavBarState extends State<NavBar> {
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.blueGrey,
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.directions_run_rounded),
-                title: Text('Exercises'),
-                backgroundColor: Colors.blue),
+              icon: Icon(Icons.directions_run_rounded),
+              title: Text('Exercises'),
+              backgroundColor: Colors.blueGrey,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.widgets),
-                title: Text('Health Tips'),
-                backgroundColor: Colors.red),
+              icon: Icon(Icons.widgets),
+              title: Text('Health Tips'),
+              backgroundColor: Colors.blueGrey,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.dining),
-                title: Text('Diet Plans'),
-                backgroundColor: Colors.green),
+              icon: Icon(Icons.dining),
+              title: Text('Diet Plans'),
+              backgroundColor: Colors.blueGrey,
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                title: Text('Profile'),
-                backgroundColor: Colors.amber),
+              icon: Icon(Icons.person),
+              title: Text('Profile'),
+              backgroundColor: Colors.blueGrey,
+            ),
           ],
-          type: BottomNavigationBarType.fixed,
+          type: BottomNavigationBarType.shifting,
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.black,
           iconSize: 30,
