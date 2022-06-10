@@ -54,27 +54,27 @@ class _NavBarState extends State<NavBar> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              title: Text('Home'),
+              label: 'Home',
               backgroundColor: Colors.blueGrey,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.directions_run_rounded),
-              title: Text('Exercises'),
+              label: 'Exercises',
               backgroundColor: Colors.blueGrey,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.widgets),
-              title: Text('Health Tips'),
+              label: 'Health Tips',
               backgroundColor: Colors.blueGrey,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.dining),
-              title: Text('Diet Plans'),
+              label: 'Diet Plans',
               backgroundColor: Colors.blueGrey,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('Profile'),
+              label: 'Profile',
               backgroundColor: Colors.blueGrey,
             ),
           ],
