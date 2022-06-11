@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './home.dart';
-import './exercises.dart';
+import 'exercises/exercises.dart';
 import './dietPlans.dart';
 import './healthTips.dart';
 import './profile.dart';
