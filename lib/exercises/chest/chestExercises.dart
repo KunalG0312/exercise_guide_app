@@ -19,7 +19,7 @@ class ChestExercises extends StatelessWidget {
     'https://images.contentstack.io/v3/assets/blt45c082eaf9747747/bltfafd4a8cd604de63/5de0ba3c85f2fe640c6fa5d7/Bench_Press_1_copy.jpg?width=1015&auto=webp&format=pjpg&quality=76'
   ];
 
-  final List<ChestWorkoutModel> ChestWorkoutData = List.generate(
+  final List<ChestWorkoutModel> chestWorkoutData = List.generate(
       workoutName.length,
       (index) => ChestWorkoutModel('${workoutName[index]}', '${url[index]}',
           '${workoutName[index]} Description....'));
@@ -32,23 +32,23 @@ class ChestExercises extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
       ),
       body: ListView.builder(
-        itemCount: ChestWorkoutData.length,
+        itemCount: chestWorkoutData.length,
         itemBuilder: (context, index) {
           return Card(
             elevation: 5.0,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0)),
             child: ListTile(
-              title: Text(ChestWorkoutData[index].name),
+              title: Text(chestWorkoutData[index].name),
               leading: SizedBox(
                 width: 50.0,
                 height: 50.0,
-                child: Image.network(ChestWorkoutData[index].img),
+                child: Image.network(chestWorkoutData[index].img),
               ),
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => ChestWorkoutDetail(
-                          chestWorkoutModel: ChestWorkoutData[index],
+                          chestWorkoutModel: chestWorkoutData[index],
                         )));
               },
             ),
