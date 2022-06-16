@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: NavBar(),
     );
@@ -46,7 +47,7 @@ class _NavBarState extends State<NavBar> {
     return Scaffold(
       appBar: AppBar(
           title: const Text('Exercise Guide App'),
-          backgroundColor: Colors.blueGrey),
+          backgroundColor: Color.fromRGBO(96, 125, 139, 1)),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
