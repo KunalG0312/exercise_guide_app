@@ -14,8 +14,16 @@ class ChestWorkoutDetail extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.network(chestWorkoutModel.img),
-          Text(chestWorkoutModel.desc)
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image(
+              image: NetworkImage(chestWorkoutModel.img),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Text(chestWorkoutModel.desc),
+          )
         ],
       ),
     );
